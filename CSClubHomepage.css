@@ -3,7 +3,7 @@
     padding: 0rem;
 }
 
-nav ul{
+nav ul {
     list-style-type:none;
     text-align:center;
 }
@@ -22,7 +22,7 @@ nav ul li:last-child {
     margin-right:0rem;
 }
 
-a{
+a {
     text-decoration:none;
     color:#000;
     font-weight: bold;
@@ -50,4 +50,4 @@ a{
     margin-right:auto;
     width:75%;
     padding:0rem 0rem 2rem 0rem;
-  }
+}
