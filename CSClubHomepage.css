@@ -1,53 +1,255 @@
 * {
     margin: 0rem;
     padding: 0rem;
+    size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+#joinUs {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-13rem, -13rem);
+    background-color: #ffff00;
+    outline: .125rem solid black;
+    padding: 1rem;
+    filter:saturate(90%);
 }
 
 nav ul {
-    list-style-type:none;
-    text-align:center;
+    list-style-type: none;
+    text-align: center;
 }
 
 nav ul li {
-    width:8rem;
-    display:inline-block;
-    padding:1rem;
-    cursor:pointer;
+    min-width: 12rem;
+    display: inline-block;
+    padding: 1rem;
+    cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-right:4rem;
-    outline:.125rem solid black;
-}
-
-nav ul li:last-child {
-    margin-right:0rem;
+    margin: auto;
+    outline: .125rem solid black;
 }
 
 a {
-    text-decoration:none;
-    color:#000;
+    text-decoration: none;
+    color: #000;
     font-weight: bold;
 }
 
 #meetings {
-    background-color:#AA00FF;
+    background-color: #AA00FF;
+    filter:saturate(90%);
 }
 
 #projects {
-    background-color:#55FF00;
+    background-color: #55FF00;
+    filter:saturate(90%);
 }
 
 #competitions {
-    background-color:#30AAE8;
+    background-color: #30AAE8;
+    filter:saturate(90%);
 }
 
 #outreach {
-    background-color:#FC02A9;
+    background-color: #FC02A9;
+    filter:saturate(90%);
 }
 
 .center {
-    display:block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0rem 0rem 2rem 0rem;
+    size: 50%;
+}
+
+div {
+    display: block;
+    margin-top: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+#tack {
+    z-index: 3;
+    max-width: 3.4rem;
+    max-height: 4.4rem;
+    margin-left: -28rem;
+    margin-top: -23rem;
+    position: absolute;
+}
+
+#img1 {
+    margin-top: 9.7rem;
+    margin-right: 70rem;
+    margin-left: -26.1rem;
+    z-index: 2;
+    max-width: 45rem;
+    min-width: 12rem;
+    position: absolute;
+}
+
+#board {
+    z-index: 1;
+    display: block;
+    max-height: 30rem;
+    min-width: 57rem;
+    margin-left: auto;
+    margin-right: auto;
+    outline: solid .5rem #e2e2e2;
+    margin-top: 2rem;
+}
+
+.social {
+    margin-left: 21.5rem;
+    z-index: 2;
+    position: absolute;
+}
+
+#instagram {
+    margin-top: -24rem;
+}
+
+#facebook {
+    margin-top: -18.2rem;
+}
+
+#discord {
+    margin-top: -12.1rem;
+}
+
+.slider{
+    width: 60rem;
+    height: 31.25rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4.9rem;
+    padding-left: 5rem;
+    margin-top: 1rem;
+}
+
+.slides{
+    width: 500%;
+    height: 31.25rem;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+/*Manual Navigation*/
+
+video {
+    width:95%;
+    height:95%;
+    margin-left: auto;
+}
+.navigation-manual{
+    position: manual;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: .5rem;
+    margin-right: auto;
+}
+
+.manual-btn{
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom:2.7rem;
+    cursor: pointer;
+    transition: 1s;
     margin-left:auto;
-    margin-right:auto;
-    width:75%;
-    padding:0rem 0rem 2rem 0rem;
+    margin-right:5rem;
+    margin-top:.5rem;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 2.5rem;
+}
+
+#notebook{
+    z-index: 1;
+    display: block;
+    max-height: 50.5rem;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-5rem;
+    opacity:0;
+}
+
+#contact{
+    z-index:2;
+    position: absolute;
+    margin-top: -27rem;
+    margin-right: 70rem;
+    margin-left: -23rem;
+    max-height: 16rem;
+}
+
+#question{
+    z-index:2;
+    position: absolute;
+    margin-top: -43rem;
+    margin-right: 70rem;
+    margin-left: -27rem;
+    max-width: 16rem;
+}
+
+#kris{
+    z-index:2;
+    position: absolute;
+    margin-top: -47rem;
+    margin-left: 10rem;
+    max-width: 18rem;
+}
+
+#helena{
+    z-index:2;
+    position: absolute;
+    margin-top: -40rem;
+    margin-left: 1rem;
+    max-width: 17rem;
+}
+
+#trey{
+    z-index:2;
+    position: absolute;
+    margin-top: -34rem;
+    margin-left: 12rem;
+    max-width: 16rem;
+}
+
+#austin{
+    z-index:2;
+    position: absolute;
+    margin-top: -26rem;
+    margin-left: 1rem;
+    max-width: 22rem;
 }
