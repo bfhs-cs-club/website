@@ -14,14 +14,14 @@
     </ul>
     </nav>
     <!--Image Slider Start-->
-    <div class = "slider">
-        <div class = "slides">
-            <img src = "slide1.png" alt = "" class="slider-img">
+    <div class="slider">
+        <div class="slides">
+            <img src="slide1.png" alt="" class="slider-img">
             <iframe width="875" height="480" src="https://www.youtube.com/embed/oq2QV1nW97Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     <!--Next and Prev Buttons-->
-    <button class="manual-btn" style = "background: url(leftarrow.png); filter:saturate(90%)" onclick="prev()"></button>
-    <button class="manual-btn" style = "background: url(rightarrow.png); filter:saturate(90%)" onclick="next()"></button>
+    <button class="manual-btn" style="background: url(leftarrow.png); filter:saturate(90%)" onclick="prev()"></button>
+    <button class="manual-btn" style="background: url(rightarrow.png); filter:saturate(90%)" onclick="next()"></button>
     </div>
     <!--Manual Navigation End-->
     <div class="container">
@@ -35,38 +35,38 @@
         <a href="https://www.facebook.com/Comp-Sci-Club-Bfhsla-105237675171549"><img src="facebook.png" class="social" id="facebook"></a>
         <a href="https://discord.com/invite/bsFxUAyANz"><img src="discord.png" class="social" id="discord"></a>
     </div>
-        <div><img id = "notebook" src="notebook.svg"></div>
-        <div><img id = "contact" src="contact-us.svg"></div>
-        <div><img id = "question" src="ques.svg"></div>
-        <div><img id = "kris" src="kris.svg"></div>
+        <div><img id="notebook" src="notebook.svg"></div>
+        <div><img id="contact" src="contact-us.svg"></div>
+        <div><img id="question" src="ques.svg"></div>
+        <div><img id="kris" src="kris.svg"></div>
         <!--<a href="mailto:mhnguyen22@bfhsla.org" style= "color: #61fa14ff; rotate(-120deg)">mhnguyen22@bfhsla.org</a>-->
-        <div><img id = "helena" src="helena.svg"></div>
-        <div><img id = "trey" src="trey.svg"></div>
-        <div><img id = "austin" src="austin.svg"></div>
+        <div><img id="helena" src="helena.svg"></div>
+        <div><img id="trey" src="trey.svg"></div>
+        <div><img id="austin" src="austin.svg"></div>
         <script>
             var slider_img = document.querySelector('.slider-img');
             var images = ['slide1.png', 'csclubfair.mp4'];
             var slideIndex = 0;
 
-            function prev(){
+            function prev() {
                 if(slideIndex <= 0){
                     slideIndex = images.length;
                 }
                 slideIndex--;
                 return setSlide();
-           }
+            }
 
-           function next(){
+            function next() {
                 if(slideIndex >= images.length - 1){
                     slideIndex = -1;
                 }
                 slideIndex++;
                 return setSlide();
-           }
+            }
 
-           function setSlide(){
+            function setSlide() {
                 return slider_img.setAttribute('src', images[slideIndex]);
-           }
+            }
 
             function changeImageHover() {
                 document.getElementById("img1").src = "blackbutton.png";
@@ -75,7 +75,6 @@
             function setOldImage() {
                 document.getElementById("img1").src = "whitebutton.png";
             }
-            
         </script>
 </body>
 </html>
