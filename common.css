@@ -1,0 +1,34 @@
+/* primary font */
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* no default margins */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* keep contents in a center column */
+#column {
+    width: 1024px;
+    margin: 0 auto 5rem;
+}
+
+#column > * {
+    margin: 0 auto;
+}
+
+/* realistic button */
+.button {
+    box-shadow: 0 .25rem 0 .125rem gray;
+}
+
+.button:hover {
+    filter: brightness(.9);
+}
+
+.button:active {
+    transform: translateY(.25rem);
+    box-shadow: none;
+}

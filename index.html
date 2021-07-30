@@ -1,80 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CS Club</title>
+    <title>BFHS CS Club</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <img class="center" src="csbackground.png" alt="BFHS CS Club Logo">
-    <nav>
-        <ul>
-            <li id="meetings"><a href="meetings.html">Meetings</a></li>
-            <li id="projects"><a href="projects.html">Projects</a></li>
-            <li id="competitions"><a href="competitions.html">Competitions</a></li>
-            <li id="outreach"><a href="outreach.html">Outreach</a></li>
-        </ul>
-    </nav>
-    <!--Image Slider Start-->
-    <div class="slider">
-        <div class="slides">
-            <img class="slider-img" src="slide1.png" alt="">
-            <iframe width="875" height="480" src="https://www.youtube.com/embed/oq2QV1nW97Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="column">
+        <img id="banner" src="csbackground.png" alt="BFHS CS Club logo with text &quot;Computer Science Club&quot;">
+        <nav id="pages">
+            <a id="meetings" class="button" href="meetings.html">Meetings</a>
+            <a id="projects" class="button" href="projects.html">Projects</a>
+            <a id="competitions" class="button" href="competitions.html">Competitions</a>
+            <a id="outreach" class="button" href="outreach.html">Outreach</a>
+        </nav>
+        <div id="slideshow">
+            <div id="slides-window">
+                <!-- `left` changed by JS -->
+                <div id="slides" style="left: 0%;">
+                    <img id="keyboard" src="slide1.png" alt="Keyboard with text &quot;Welcome to our website&quot;">
+                    <iframe width="875" height="480" src="https://www.youtube.com/embed/oq2QV1nW97Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="slide-buttons">
+                <!-- the left-arrow character is off-center; you know what that means! -->
+                <button class="slide-button button" onclick="changeSlide(-1)"><div style="transform: scaleX(-1);">❯</div></button>
+                <button class="slide-button button" onclick="changeSlide(1)">❯</button>
+            </div>
         </div>
-        <!--Next and Prev Buttons-->
-        <button class="manual-btn" style="background: url(leftarrow.png); filter:saturate(90%)" onclick="prev()"></button>
-        <button class="manual-btn" style="background: url(rightarrow.png); filter:saturate(90%)" onclick="next()"></button>
+        <div id="board">
+            <div id="board-title">Want to See More of Computer Science Club?</div>
+            <div id="classroom">
+                <a href="https://classroom.google.com/c/MTI3OTI1OTcwODE0?cjc=nroh3sp"><img id="join-us" src="whitebutton.png" alt="Grid of club members and text &quot;Join us!&quot;" onmouseover= "changeImage(this, 'blackbutton.png')" onmouseout="changeImage(this, 'whitebutton.png')"></a>
+                <img id="tack" src="greentack.png" alt="">
+            </div>
+            <div id="socials">
+                <a target="_blank" href="https://www.instagram.com/bfhsla.compsciclub/channel/"><img id="instagram" class="social" src="instagram.png" alt="Instagram"></a>
+                <a target="_blank" href="https://www.facebook.com/Comp-Sci-Club-Bfhsla-105237675171549"><img id="facebook" class="social" src="facebook.png" alt="Facebook"></a>
+                <a target="_blank" href="https://discord.com/invite/bsFxUAyANz"><img id="discord" class="social" src="discord.png" alt="Discord"></a>
+            </div>
+        </div>
+        <div id="notebook">
+            <img id="contact" src="contact-us.svg" alt="&quot;Contact Us!&quot; sticky note">
+            <img id="question" src="ques.svg" alt="&quot;Have Questions!&quot; sticky note">
+            <img id="kris" src="kris.svg" alt="&quot;Outreach Coordinator: Kris Nguyen&quot; with profile image">
+            <img id="helena" src="helena.svg" alt="&quot;Competition Coordinator: Helena Usey&quot; with profile image">
+            <img id="trey" src="trey.svg" alt="&quot;Co-President: Trey Bowen&quot; with profile image">
+            <img id="austin" src="austin.svg" alt="&quot;Co-President: Austin Geng&quot; with profile image">
+        </div>
     </div>
-    <!--Manual Navigation End-->
-    <div class="container">
-        <div id="joinUs">Want to See More of Computer Science Club?</div>
-        <a href="https://classroom.google.com/c/MTI3OTI1OTcwODE0?cjc=nroh3sp"><img id="img1" src="whitebutton.png" onmouseover= "changeImageHover()" onmouseout="setOldImage()"></a>
-        <img id="board" src="corkboard.png">
-        <img id="tack" src="greentack.png">
-    </div>
-    <div>
-        <a href="https://www.instagram.com/bfhsla.compsciclub/channel/"><img id="instagram" class="social" src="instagram.png"></a>
-        <a href="https://www.facebook.com/Comp-Sci-Club-Bfhsla-105237675171549"><img id="facebook" class="social" src="facebook.png"></a>
-        <a href="https://discord.com/invite/bsFxUAyANz"><img id="discord" class="social" src="discord.png"></a>
-    </div>
-    <div><img id="notebook" src="notebook.svg"></div>
-    <div><img id="contact" src="contact-us.svg"></div>
-    <div><img id="question" src="ques.svg"></div>
-    <div><img id="kris" src="kris.svg"></div>
-    <!--<a href="mailto:mhnguyen22@bfhsla.org" style= "color: #61fa14ff; rotate(-120deg)">mhnguyen22@bfhsla.org</a>-->
-    <div><img id="helena" src="helena.svg"></div>
-    <div><img id="trey" src="trey.svg"></div>
-    <div><img id="austin" src="austin.svg"></div>
     <script>
-        var slider_img = document.querySelector('.slider-img');
-        var images = ['slide1.png', 'csclubfair.mp4'];
-        var slideIndex = 0;
-
-        function prev() {
-            if(slideIndex <= 0){
-                slideIndex = images.length;
-            }
-            slideIndex--;
-            return setSlide();
+        function mod(n, m) {
+            return (n % m + m) % m;
         }
 
-        function next() {
-            if(slideIndex >= images.length - 1){
-                slideIndex = -1;
-            }
-            slideIndex++;
-            return setSlide();
+        let slideIndex = 0;
+        function changeSlide(n) {
+            slideIndex = mod(slideIndex + n, 2);
+            document.getElementById("slides").style.left = `-${slideIndex}00%`;
         }
 
-        function setSlide() {
-            return slider_img.setAttribute('src', images[slideIndex]);
-        }
-
-        function changeImageHover() {
-            document.getElementById("img1").src = "blackbutton.png";
-        }
-
-        function setOldImage() {
-            document.getElementById("img1").src = "whitebutton.png";
+        function changeImage(element, src) {
+            element.src = src;
         }
     </script>
 </body>
