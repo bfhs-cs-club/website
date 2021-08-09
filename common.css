@@ -21,6 +21,7 @@ html, body {
 
 /* realistic button */
 .button {
+    transform: translateY(-.25rem);
     box-shadow: 0 .25rem 0 0 gray;
 }
 
@@ -29,6 +30,6 @@ html, body {
 }
 
 .button:active {
-    transform: translateY(.25rem);
+    transform: none;
     box-shadow: none;
 }
