@@ -21,7 +21,7 @@ html, body {
 
 /* realistic button */
 .button {
-    box-shadow: 0 .25rem 0 .125rem gray;
+    box-shadow: 0 .25rem 0 0 gray;
 }
 
 .button:hover {

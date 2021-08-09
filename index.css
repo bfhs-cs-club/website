@@ -14,7 +14,7 @@
     flex-basis: 0;
     flex-grow: 1;
     display: inline-block;
-    outline: .125rem solid black;
+    border: .125rem solid black;
     padding: 1rem;
     text-align: center;
     font-weight: bold;
@@ -74,11 +74,10 @@
 }
 
 .slide-button {
-    width: 3rem;
-    height: 3rem;
+    width: 3.25rem;
+    height: 3.25rem;
     cursor: pointer;
-    border-style: initial; /* undo default formatting */
-    outline: .125rem solid black;
+    border: .125rem solid black;
     background-color: #ffca38;
     font-size: 36px;
     line-height: 0; /* hack to vertically center oversize text */
@@ -91,7 +90,7 @@
     width: 57rem;
     background-image: url("corkboard.png");
     background-size: 100% 100%;
-    outline: solid .5rem #e2e2e2;
+    border: solid .5rem #e2e2e2;
     margin-top: 2rem;
 }
 
@@ -101,7 +100,7 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffff4a;
-    outline: .125rem solid black;
+    border: .125rem solid black;
     padding: 1rem;
     font-weight: bold;
 }
